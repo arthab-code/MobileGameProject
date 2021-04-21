@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5fc0efba83dc34fbeca5c4f3de16f2, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: 
+  Obstacle:
+  - {fileID: 6638268544287195260, guid: 571fb0de3a96ebf45aa517129dae788d, type: 3}
+  GroundDown:
+  - {fileID: 7278178105404935595, guid: 1a113ad833b98ea49af283e5a73b4db0, type: 3}
+  GameoverArea:
+  - {fileID: 2607069915188732933, guid: b141440965bf9d449a02bae746fb0f75, type: 3}
+  Enemy:
+  - {fileID: 4612166632780503423, guid: d7e51ed619cfb2f498c8e68e41352f77, type: 3}

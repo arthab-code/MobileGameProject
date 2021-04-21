@@ -8,7 +8,7 @@ public class Ground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = (Player)FindObjectOfType(typeof(Player));
+        playerScript = GameplayManager.Instance.playerScript;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

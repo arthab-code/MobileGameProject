@@ -9,6 +9,7 @@ public class GameplayManager : Singleton<GameplayManager>
     public event GameStateCallback OnGamePaused;
     public event GameStateCallback OnGamePlaying;
 
+    public Player playerScript;
     private enum EGameState
     {
         Playing,
@@ -53,8 +54,8 @@ public class GameplayManager : Singleton<GameplayManager>
     // Start is called before the first frame update
     void Start()
     {
+        playerScript = (Player)FindObjectOfType(typeof(Player));
         GameStatus = EGameState.Paused;
-        OnGamePaused();
     }
 
     // Update is called once per frame

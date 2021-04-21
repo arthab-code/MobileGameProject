@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = (Player)FindObjectOfType(typeof(Player));
+        playerScript = GameplayManager.Instance.playerScript;
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -34,10 +34,11 @@ public class Enemy : MonoBehaviour
                 Vector3 tempVector = playerScript.BouncePosition;
                 playerScript.BouncePosition = new Vector3(0, playerScript.BouncePosition.y - 0.5f, 0);
                 tempVector = playerScript.BouncePosition;
+                return;
             }
 
             if (playerScript.speed < playerScript.MaxSpeed)
-                playerScript.speed += (playerScript.speed/10);
+                playerScript.speed += (playerScript.speed/20);
         }
     }
 

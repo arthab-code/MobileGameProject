@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
         rigidbody2D.simulated = false;
 
-        startPosition = new Vector3(transform.position.x + 3f, transform.position.y + 4f, 0);
+        startPosition = new Vector3(transform.position.x + 3f, transform.position.y + 3f, 0);
         bouncePosition = startPosition;
 
         StartCoroutine(SpeedDecrease());

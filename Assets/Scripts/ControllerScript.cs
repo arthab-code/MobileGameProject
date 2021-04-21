@@ -8,7 +8,7 @@ public class ControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = gameObject.GetComponent<Player>();
+        playerScript = GameplayManager.Instance.playerScript;
     }
 
     // Update is called once per frame
