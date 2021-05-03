@@ -34,6 +34,6 @@ public class Ground : MonoBehaviour
             }
             
             playerScript.speed -= 0.5f;
-        }
+        } 
     }
 }

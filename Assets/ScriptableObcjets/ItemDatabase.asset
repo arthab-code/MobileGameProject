@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: ItemDatabase
   m_EditorClassIdentifier: 
   Obstacle:
-  - {fileID: 6638268544287195260, guid: 571fb0de3a96ebf45aa517129dae788d, type: 3}
-  GroundDown:
-  - {fileID: 7278178105404935595, guid: 1a113ad833b98ea49af283e5a73b4db0, type: 3}
-  GameoverArea:
-  - {fileID: 2607069915188732933, guid: b141440965bf9d449a02bae746fb0f75, type: 3}
+  - {fileID: 7830683080133384948, guid: 571fb0de3a96ebf45aa517129dae788d, type: 3}
+  Terrain:
+  - {fileID: 5054382747397267239, guid: 712e2c30283a402488346c1ea53dedd2, type: 3}
   Enemy:
   - {fileID: 4612166632780503423, guid: d7e51ed619cfb2f498c8e68e41352f77, type: 3}

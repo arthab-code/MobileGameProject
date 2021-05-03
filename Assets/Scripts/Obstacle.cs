@@ -10,6 +10,10 @@ public class Obstacle : MonoBehaviour
     private new BoxCollider2D boxCollider2D;
     private Vector3 startPosition;
     private Quaternion startRotation;
+    private SpriteRenderer spriteRenderer;
+
+    private Vector3 parentPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,35 @@ public class Obstacle : MonoBehaviour
         playerScript = GameplayManager.Instance.playerScript;
         boxCollider2D = GetComponent<BoxCollider2D>();
         startPosition = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        parentPosition = GetComponentInParent<Transform>().position;
 
+        SetObstacleParameters();
+
+    }
+
+    private void SetObstacleParameters()
+    {
+        float cameraHeight = (Camera.main.pixelHeight / 100) * 2 ;
+        float value = 0f;
+
+        if (gameObject.name == "ObstacleDOWN")
+        {
+            value = (cameraHeight + parentPosition.y);
+            Debug.Log(value);
+            Debug.Log(parentPosition.y);
+            spriteRenderer.size = new Vector2(spriteRenderer.size.x, value);
+            boxCollider2D.size = spriteRenderer.size;
+            boxCollider2D.offset = new Vector2(0, (spriteRenderer.size.y / 2) * -1);
+        }
+
+        if (gameObject.name == "ObstacleUP")
+        {
+            value = (cameraHeight - parentPosition.y);
+            spriteRenderer.size = new Vector2(spriteRenderer.size.x, value);
+            boxCollider2D.size = spriteRenderer.size;
+            boxCollider2D.offset = new Vector2(0, (spriteRenderer.size.y / 2));
+        }
     }
 
     private float SpeedGoal()

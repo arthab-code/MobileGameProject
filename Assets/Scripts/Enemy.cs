@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     private Player playerScript;
     private new Rigidbody2D rigidbody2D;
 
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        //Move();
+        Move(speed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player") && playerScript.isBouncing == false)
         {
             if (playerScript.speed <= 0)
                 return;
@@ -42,8 +43,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Move(float speed)
     {
-        rigidbody2D.velocity = new Vector2(-2f, 0);
+        rigidbody2D.velocity = new Vector2(speed, 0);
     }
 }

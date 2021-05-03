@@ -8,11 +8,8 @@ public class ItemDatabase : ScriptableObject
     [Header("Obstacle")]
     public GameObject[] Obstacle;
 
-    [Header("Ground")]
-    public GameObject[] GroundDown;
-
-    [Header("Game Over Area")]
-    public GameObject[] GameoverArea;
+    [Header("Terrain")]
+    public GameObject[] Terrain;
 
     [Header("Enemy")]
     public GameObject[] Enemy;

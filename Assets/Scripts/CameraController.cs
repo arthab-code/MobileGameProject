@@ -10,8 +10,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         camera = GetComponent<Camera>();
-
-        Debug.Log(Camera.main.pixelHeight / 100);
     }
 
     // Update is called once per frame
